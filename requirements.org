@@ -13,7 +13,7 @@
      own source code.
    - Collaboration must be documented in the README.md file
    - Any external source code must be referenced and documented in
-     the README.md file
+     the httpclient.py file
 
 ** User Stories
    - As a user I want to GET from URLs
@@ -36,12 +36,15 @@
    - [ ] httpclient can handle 404 requests and 200 requests
 
 ** Restrictions
-   - [ ] Use Python 2.7
-   - [ ] Must run in the undergrad lab (Ubuntu 12.04)
+   - [ ] Use Python 3.6 (3.6.7 is preferred)
+   - [ ] Must run in the VM without virtualenv (Ubuntu 18.10, Python 3.6)
    - [ ] License your httpclient properly (use an OSI approved license)
      - Put your name on it!
    - [ ] You cannot use a Web Client library except for urllib utils
      to convert strings to url-encode and query-string format and back
+      - urllib.request is BANNED
+      - urllib.parse is OKAY for parsing URLs
+      - you have to parse headers yourself
    - [ ] You should use the socket library that comes with python
 
 ** Recommendations
@@ -58,16 +61,21 @@
      repository. I would prefer github for the host.
      - Line 1: the git URL
      - Line 2: Your CCID
-     - Line 3: Your collaborator's CCID
-
-   - To mark your assignment I should be able to type:
-    : git clone http://github.com/youruserid/thisassignment.git yourccid
-    : cd yourccid
-    : python freetests.py
+   - An example submission looks like this
+    #+BEGIN_SRC bash
+        https://github.com/youruserid/thisassignment.git 
+        yourccid
+    #+END_SRC
+   - To mark your assignment I should be able to type:     
+    #+BEGIN_SRC bash
+        git clone http://github.com/youruserid/thisassignment.git yourccid
+        cd yourccid
+        python3 freetests.py
+    #+END_SRC
 
    - Marks will be deducted if I cannot successfully do this.
      
-   - Marks will be deducted for using library code that does the assignment
+   - Marks will be deducted for using library code that does the assignment.
    
    - Marks can be deducated for egregious violation of requirements (e.g. hard
      coding path names etc.).
