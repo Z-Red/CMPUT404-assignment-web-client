@@ -130,9 +130,10 @@ class HTTPClient(object):
         response_data = str(self.recvall(self.socket))
         self.close()
 
-        print(response_data)
         body = self.get_body(response_data)
         code = self.get_code(response_data)
+        print(body);
+        
         return HTTPResponse(code, body)
 
     def POST(self, url, args=None):
@@ -155,9 +156,9 @@ class HTTPClient(object):
         response_data = str(self.recvall(self.socket))
         self.close()
 
-        print(response_data)
         body = self.get_body(response_data)
         code = self.get_code(response_data)
+        print(body)
         return HTTPResponse(code, body)
 
     def command(self, url, command="GET", args=None):
