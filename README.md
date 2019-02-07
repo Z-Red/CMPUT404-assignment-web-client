@@ -11,7 +11,7 @@ Contributors / Licensing
 ========================
 
 Generally everything is LICENSE'D under the Apache 2 license by Abram Hindle,
-Araien Zach Redfern, https://github.com/tywtyw2002, and
+Araien Zach Redfern (https://github.com/Z-Red), https://github.com/tywtyw2002, and
 https://github.com/treedust
 
 But the server.py example is derived from the python documentation
